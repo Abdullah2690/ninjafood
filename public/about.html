@@ -13,8 +13,8 @@
     <div class="grid md:grid-cols-3"><!--Content wrapper-->
         <div class="md:col-span-1 md:flex md:justify-end">
             <nav class="text-right">
-                <div class="flex justify-between items-center">
-                    <h1 class="font-bold uppercase p-4 border-b border-gray-100 text-mamoth">
+                <div class="flex items-center justify-between">
+                    <h1 class="p-4 font-bold uppercase border-b border-gray-100 text-mamoth">
                         <a href="/" class="hover:text-gray-700">Food Ninja</a>
                     </h1>
 
@@ -28,9 +28,9 @@
                 </div>
 
                 <div>
-                    <ul class="text-sm mt-6 hidden md:block" id="menu">
+                    <ul class="hidden mt-6 text-sm md:block" id="menu">
                         <li class="py-1">
-                            <a href="index.html" class="px-4 flex justify-end border-r-4 border-white">
+                            <a href="index.html" class="flex justify-end px-4 border-r-4 border-white">
                                 <span>Home</span>
 
                                 <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -40,8 +40,8 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="text-gray-700 font-bold py-1">
-                            <a href="about.html" class="px-4 flex justify-end border-r-4 border-primary">
+                        <li class="py-1 font-bold text-gray-700">
+                            <a href="about.html" class="flex justify-end px-4 border-r-4 border-primary">
                                 <span>About</span>
 
                                 <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="py-1">
-                            <a href="contact.html" class="px-4 flex justify-end border-r-4 border-white">
+                            <a href="contact.html" class="flex justify-end px-4 border-r-4 border-white">
                                 <span>Contact</span>
 
                                 <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -69,23 +69,23 @@
 
         <main class="px-16 py-6 bg-gray-100 md:col-span-2">
             <header>
-                <h2 class="text-gray-700 text-6xl font-semibold">About Us</h2>
-                <h3 class="text-2xl font-semibold mt-4">Our Journey</h3>
+                <h2 class="text-6xl font-semibold text-gray-700">About Us</h2>
+                <h3 class="mt-4 text-2xl font-semibold">Our Journey</h3>
             </header>
 
             <section class="mt-8">
-                <p class="text-gray-700 text-lg leading-relaxed">
+                <p class="text-lg leading-relaxed text-gray-700">
                     Welcome to Food Ninja, your ultimate destination for discovering, cooking, and sharing the most delicious recipes. 
                     We are passionate about bringing you closer to the flavors you love, helping you create memorable meals for any occasion.
                 </p>
 
-                <p class="text-gray-700 text-lg leading-relaxed mt-4">
+                <p class="mt-4 text-lg leading-relaxed text-gray-700">
                     Our journey started with a simple idea: to make cooking accessible and enjoyable for everyone. Whether you're a beginner 
                     or a seasoned chef, our collection of recipes, cooking tips, and kitchen hacks are designed to inspire and empower you 
                     in the kitchen.
                 </p>
 
-                <p class="text-gray-700 text-lg leading-relaxed mt-4">
+                <p class="mt-4 text-lg leading-relaxed text-gray-700">
                     At Food Ninja, we believe in the power of good food to bring people together. Our recipes are curated with care, ensuring 
                     they are easy to follow, packed with flavor, and made with ingredients you can trust. Join us on this culinary adventure 
                     and let’s create something delicious together!
@@ -93,47 +93,44 @@
             </section>
 
             <section class="mt-8">
-                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Our Team</h4>
-                <div class="mt-8 grid lg:grid-cols-3 gap-10">
+                <h4 class="pb-2 mt-12 font-bold border-b border-gray-200">Our Team</h4>
+                <div class="grid gap-10 mt-8 lg:grid-cols-3">
+
                     <!-- Team member cards go here -->
-                    <div class="card hover:shadow-lg cursor-pointer" onclick="toggleCard(this)">
-                        <img src="img/Abdu.jfif" alt="Chef 1" class="w-full h-32 sm:h-48 object-cover">
-                        <div class="m-4">
-                            <span class="font-bold">Abdulrahman</span>
-                            <span class="block text-gray-500 text-sm">Head Chef & Founder</span>
-
-                            <!-- Hidden Biography Section -->
-                        <div class="biography mt-4 hidden text-gray-700">
-                            <h4 class="font-bold">Biography:</h4>
-                            <p>
-                                Chef Abdulrahman has over 20 years of experience in the culinary arts, specializing in spicy dishes that bring a kick to your taste buds. Trained in the heart of the spice trade, his recipes are a blend of tradition and innovation.
-                            </p>
+                    <a href="chefprofile1.html" class="cursor-pointer card hover:shadow-lg">
+                        <div>
+                            <img src="img/Abdu.jfif" alt="Chef 1" class="object-cover w-full h-32 sm:h-48">
+                            <div class="m-4">
+                                <span class="font-bold">Abdulrahman</span>
+                                <span class="block text-sm text-gray-500">Head Chef & Founder</span>
+                            </div>
                         </div>
-                        </div>
+                    </a>
 
-                        
-                    </div>
-
-                    <div class="card hover:shadow-lg">
-                        <img src="img/Salman.jfif" alt="Chef 2" class="w-full h-32 sm:h-48 object-cover">
-                        <div class="m-4">
-                            <span class="font-bold">Salman</span>
-                            <span class="block text-gray-500 text-sm">Culinary Expert</span>
+                    <a href="chefprofile2.html" class="cursor-pointer card hover:shadow-lg">
+                        <div>
+                            <img src="img/Salman.jfif" alt="Chef 2" class="object-cover w-full h-32 sm:h-48">
+                            <div class="m-4">
+                                <span class="font-bold">Salman</span>
+                                <span class="block text-sm text-gray-500">Culinary Expert</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="card hover:shadow-lg">
-                        <img src="img/Twaha.jfif" alt="Chef 3" class="w-full h-32 sm:h-48 object-cover">
-                        <div class="m-4">
-                            <span class="font-bold">Twaha</span>
-                            <span class="block text-gray-500 text-sm">Spagetti Expert</span>
+                    <a href="chefprofile3.html" class="cursor-pointer card hover:shadow-lg">
+                        <div>
+                            <img src="img/Twaha.jfif" alt="Chef 3" class="object-cover w-full h-32 sm:h-48">
+                            <div class="m-4">
+                                <span class="font-bold">Twaha</span>
+                                <span class="block text-sm text-gray-500">Spagetti Expert</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </section>
 
             <div class="flex justify-center mt-8">
-                <a href="contact.html" class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-110 hover:opacity-50 transition ease-out hover:duration-300">Contact Us</a>
+                <a href="contact.html" class="transition ease-out transform btn bg-secondary-100 text-secondary-200 hover:shadow-inner hover:scale-110 hover:opacity-50 hover:duration-300">Contact Us</a>
             </div>
         </main>
     </div>
