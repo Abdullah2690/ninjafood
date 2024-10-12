@@ -16,6 +16,14 @@
                         <a href="/" class="hover:text-gray-700">Food Ninja</a>
                     </h1>
 
+                    <!-- Language Selector -->
+                    <div class="p-4">
+                        <select id="language-select" class="px-2 py-1 border border-gray-300 rounded">
+                            <option value="en">English</option>
+                            <option value="fr">French</option>
+                            <option value="es">Spanish</option>
+                        </select>
+                    </div>
                     <div class="px-4 cursor-pointer md:hidden" id="burger">
                         <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -77,8 +85,8 @@
     <div class="flex flex-col items-center md:flex-row md:items-start md:space-x-8">
         <img src="img/Abdu.jfif" alt="Chef Abdulrahman" class="object-cover w-32 h-32 mb-4 rounded-full md:w-48 md:h-48 md:mb-0">
         <div class="mt-4 text-center md:text-left md:mt-0">
-            <h2 class="text-3xl font-semibold">Chef Abdulrahman</h2>
-            <p class="mt-2 text-gray-700 md:mt-0">
+            <h2 id="chef-profile-heading" class="text-3xl font-semibold">Chef Abdulrahman</h2>
+            <p id="chef-bio" class="mt-2 text-gray-700 md:mt-0">
                 With over 10 years of culinary experience, Chef Abdulrahman is known for his innovative takes on traditional dishes. His specialties include Middle Eastern cuisine and vegan recipes, blending classic flavors with modern techniques.
             </p>
         </div>
