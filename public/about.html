@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Food Ninja</title>
+    <title>About SILIKA BITES</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Popup modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .chef-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+        .recipe-list {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+        .recipe-list li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 
 <body class="text-gray-500 font-body">
-
+    
     <div class="grid md:grid-cols-3"><!--Content wrapper-->
         <div class="md:col-span-1 md:flex md:justify-end">
             <nav class="text-right">
                 <div class="flex items-center justify-between">
                     <h1 class="p-4 font-bold uppercase border-b border-gray-100 text-mamoth">
-                        <a href="/" class="hover:text-gray-700">Food Ninja</a>
+                        <a href="/" class="hover:text-gray-700">Silika Bites</a>
                     </h1>
 
                     <div class="px-4 cursor-pointer md:hidden" id="burger">
@@ -32,7 +80,6 @@
                         <li class="py-1">
                             <a href="index.html" class="flex justify-end px-4 border-r-4 border-white">
                                 <span>Home</span>
-
                                 <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -43,7 +90,6 @@
                         <li class="py-1 font-bold text-gray-700">
                             <a href="about.html" class="flex justify-end px-4 border-r-4 border-primary">
                                 <span>About</span>
-
                                 <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -54,7 +100,6 @@
                         <li class="py-1">
                             <a href="contact.html" class="flex justify-end px-4 border-r-4 border-white">
                                 <span>Contact</span>
-
                                 <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -75,7 +120,7 @@
 
             <section class="mt-8">
                 <p class="text-lg leading-relaxed text-gray-700">
-                    Welcome to Food Ninja, your ultimate destination for discovering, cooking, and sharing the most delicious recipes. 
+                    Welcome to Silika Bites, your ultimate destination for discovering, cooking, and sharing the most delicious recipes. 
                     We are passionate about bringing you closer to the flavors you love, helping you create memorable meals for any occasion.
                 </p>
 
@@ -86,9 +131,9 @@
                 </p>
 
                 <p class="mt-4 text-lg leading-relaxed text-gray-700">
-                    At Food Ninja, we believe in the power of good food to bring people together. Our recipes are curated with care, ensuring 
+                    At Silika Bites, we believe in the power of good food to bring people together. Our recipes are curated with care, ensuring 
                     they are easy to follow, packed with flavor, and made with ingredients you can trust. Join us on this culinary adventure 
-                    and let’s create something delicious together!
+                    and let's create something delicious together!
                 </p>
             </section>
 
@@ -96,38 +141,40 @@
                 <h4 class="pb-2 mt-12 font-bold border-b border-gray-200">Our Team</h4>
                 <div class="grid gap-10 mt-8 lg:grid-cols-3">
 
-                    <!-- Team member cards go here -->
-                    <a href="chefprofile1.html" class="cursor-pointer card hover:shadow-lg">
-                        <div>
-                            <img src="img/Abdu.jfif" alt="Chef 1" class="object-cover w-full h-32 sm:h-48">
-                            <div class="m-4">
-                                <span class="font-bold">Abdulrahman</span>
-                                <span class="block text-sm text-gray-500">Head Chef & Founder</span>
-                            </div>
+                    <!-- Team member cards -->
+                    <div class="cursor-pointer card hover:shadow-lg team-member" data-member="abdulrahman">
+                        <img src="img/Abdulrahman.jfif" alt="Chef 1" class="object-cover w-full h-32 sm:h-48">
+                        <div class="m-4">
+                            <span class="font-bold">Head Chef & Founder</span>
+                            <span class="block text-sm text-gray-500">Master of Easten cuisine</span>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="chefprofile2.html" class="cursor-pointer card hover:shadow-lg">
-                        <div>
-                            <img src="img/Salman.jfif" alt="Chef 2" class="object-cover w-full h-32 sm:h-48">
-                            <div class="m-4">
-                                <span class="font-bold">Salman</span>
-                                <span class="block text-sm text-gray-500">Culinary Expert</span>
-                            </div>
+                    <div class="cursor-pointer card hover:shadow-lg team-member" data-member="salman">
+                        <img src="img/Salman.jfif" alt="Chef 2" class="object-cover w-full h-32 sm:h-48">
+                        <div class="m-4">
+                            <span class="font-bold">Culinary Expert</span>
+                            <span class="block text-sm text-gray-500">Specializes in international cuisine</span>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="chefprofile3.html" class="cursor-pointer card hover:shadow-lg">
-                        <div>
-                            <img src="img/Twaha.jfif" alt="Chef 3" class="object-cover w-full h-32 sm:h-48">
-                            <div class="m-4">
-                                <span class="font-bold">Twaha</span>
-                                <span class="block text-sm text-gray-500">Spagetti Expert</span>
-                            </div>
+                    <div class="cursor-pointer card hover:shadow-lg team-member" data-member="twaha">
+                        <img src="img/Twaha.jfif" alt="Chef 3" class="object-cover w-full h-32 sm:h-48">
+                        <div class="m-4">
+                            <span class="font-bold">Pasta Specialist</span>
+                            <span class="block text-sm text-gray-500">Master of Italian cuisine</span>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </section>
+
+            <!-- Modal Popup -->
+            <div id="memberModal" class="modal">
+                <div class="modal-content">
+                    <button class="close-modal">&times;</button>
+                    <div id="modalContent"></div>
+                </div>
+            </div>
 
             <div class="flex justify-center mt-8">
                 <a href="contact.html" class="transition ease-out transform btn bg-secondary-100 text-secondary-200 hover:shadow-inner hover:scale-110 hover:opacity-50 hover:duration-300">Contact Us</a>
@@ -135,7 +182,135 @@
         </main>
     </div>
 
-    <script src="index.js"></script>
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const burger = document.querySelector('#burger');
+            const menu = document.querySelector('#menu');
+            
+            if (burger && menu) {
+                burger.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
 
+            // Team member data
+            const teamMembers = {
+                abdulrahman: {
+                    name: "Abdulrahman",
+                    image: "img/Abdulrahman.jfif",
+                    bio: "With over 10 years of culinary experience, our founder brings innovative takes on traditional dishes. Specializing in fusion cuisine that combines Eastern and Western flavors.",
+                    specialties: [
+                        "Middle Eastern Cuisine",
+                        "Vegan Dishes", 
+                        "Quick and Easy Meals",
+                        "Healthy Desserts"
+                    ],
+                    recipes: [
+                        "5 Bean Chilli Stew (25 mins)",
+                        "Veg Noodles (20 mins)",
+                        "Tofu Curry (25 mins)"
+                    ]
+                },
+                salman: {
+                    name: "Salman",
+                    image: "img/Salman.jfif",
+                    bio: "Our culinary expert with extensive training in French and Asian cooking techniques. Passionate about creating visually stunning dishes that taste as good as they look.",
+                    specialties: [
+                        "French Cuisine",
+                        "Asian Fusion",
+                        "Plating Techniques",
+                        "Sauce Mastery"
+                    ],
+                    recipes: [
+                        "Beef Bourguignon (3 hours)",
+                        "Pad Thai (30 mins)",
+                        "Sushi Platter (45 mins)"
+                    ]
+                },
+                twaha: {
+                    name: "Twaha",
+                    image: "img/Twaha.jfif",
+                    bio: "Master of Italian cuisine with a particular focus on perfecting pasta dishes. Trained in Rome and brings authentic Italian techniques to our kitchen.",
+                    specialties: [
+                        "Fresh Pasta Making",
+                        "Authentic Italian",
+                        "Risotto Techniques",
+                        "Wine Pairings"
+                    ],
+                    recipes: [
+                        "Spaghetti Carbonara (20 mins)",
+                        "Mushroom Risotto (35 mins)",
+                        "Lasagna Bolognese (1.5 hours)"
+                    ]
+                }
+            };
+
+            // Modal functionality
+            const modal = document.getElementById('memberModal');
+            const modalContent = document.getElementById('modalContent');
+            const closeModal = document.querySelector('.close-modal');
+            const memberCards = document.querySelectorAll('.team-member');
+
+            memberCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const memberId = this.getAttribute('data-member');
+                    const member = teamMembers[memberId];
+                    
+                    modalContent.innerHTML = `
+                        <div class="text-center">
+                            <img src="${member.image}" alt="${member.name}" class="chef-image">
+                            <h3 class="text-2xl font-bold">${member.name}</h3>
+                            <p class="mt-4">${member.bio}</p>
+                            
+                            <div class="mt-6 text-left">
+                                <h4 class="text-xl font-semibold">Specialties:</h4>
+                                <ul class="mt-2 list-inside">
+                                    ${member.specialties.map(spec => `<li>${spec}</li>`).join('')}
+                                </ul>
+                            </div>
+                            
+                            <div class="mt-6 text-left">
+                                <h4 class="text-xl font-semibold">Featured Recipes:</h4>
+                                <ul class="recipe-list">
+                                    ${member.recipes.map(recipe => `<li>${recipe}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    `;
+                    
+                    modal.style.display = 'flex';
+                });
+            });
+
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <!-- Firebase initialization fixed -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyDSFxLr_XUtbV5b1EwnIE37QUgU5otC6N8",
+            authDomain: "silika-bites.firebaseapp.com",
+            projectId: "silika-bites",
+            storageBucket: "silika-bites.appspot.com",
+            messagingSenderId: "841551984440",
+            appId: "1:841551984440:web:9702d7b843ece31ac6b3cd",
+            measurementId: "G-6Q1YKJT5QB"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+</body>
 </html>

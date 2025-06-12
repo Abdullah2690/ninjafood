@@ -1,20 +1,4 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDSFxLr_XUtbV5b1EwnIE37QUgU5otC6N8",
-  authDomain: "silika-bites.firebaseapp.com",
-  projectId: "silika-bites",
-  storageBucket: "silika-bites.appspot.com",
-  messagingSenderId: "841551984440",
-  appId: "1:841551984440:web:9702d7b843ece31ac6b3cd",
-  measurementId: "G-6Q1YKJT5QB"
-};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

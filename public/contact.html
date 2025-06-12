@@ -15,7 +15,7 @@
             <nav class="text-right">
                 <div class="flex items-center justify-between">
                     <h1 class="p-4 font-bold uppercase border-b border-gray-100 text-mamoth">
-                        <a href="/" class="hover:text-gray-700">Food Ninja</a>
+                        <a href="/" class="hover:text-gray-700">Silika Bites</a>
                     </h1>
 
                     <div class="px-4 cursor-pointer md:hidden" id="burger">
@@ -32,7 +32,6 @@
                         <li class="py-1">
                             <a href="index.html" class="flex justify-end px-4 border-r-4 border-white">
                                 <span>Home</span>
-
                                 <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -40,10 +39,9 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="py-1">
-                            <a href="about.html" class="flex justify-end px-4 border-r-4 border-white">
+                        <li class="py-1 font-bold text-gray-700">
+                            <a href="about.html" class="flex justify-end px-4 border-r-4 border-primary">
                                 <span>About</span>
-
                                 <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -51,10 +49,9 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="py-1 font-bold text-gray-700">
-                            <a href="contact.html" class="flex justify-end px-4 border-r-4 border-primary">
+                        <li class="py-1">
+                            <a href="contact.html" class="flex justify-end px-4 border-r-4 border-white">
                                 <span>Contact</span>
-
                                 <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -110,7 +107,7 @@
             <section class="mt-12">
                 <h4 class="pb-2 font-bold border-b border-gray-200">Our Office</h4>
                 <p class="mt-4 text-lg leading-relaxed text-gray-700">
-                    123 Food Ninja Street, Culinary City, Kitchenland
+                    123 Kristwick Street, Blantyre, Malawi
                 </p>
                 <p class="mt-2 text-lg leading-relaxed text-gray-700">
                     Email: support@silikabites.com | Phone: +265 991 00 67 65
@@ -119,7 +116,35 @@
         </main>
     </div>
 
-    <script src="index.js" type="module"></script>
-</body>
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const burger = document.querySelector('#burger');
+            const menu = document.querySelector('#menu');
+            
+            if (burger && menu) {
+                burger.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyDSFxLr_XUtbV5b1EwnIE37QUgU5otC6N8",
+            authDomain: "silika-bites.firebaseapp.com",
+            projectId: "silika-bites",
+            storageBucket: "silika-bites.appspot.com",
+            messagingSenderId: "841551984440",
+            appId: "1:841551984440:web:9702d7b843ece31ac6b3cd",
+            measurementId: "G-6Q1YKJT5QB"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+</body>
 </html>
